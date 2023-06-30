@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Component="clr-namespace:Training_Lien"
+             x:Class="Training_Lien.LoginView">
+    <ContentView.Content>
+        <StackLayout Padding="60"
+                     Orientation="Vertical">
+            <BoxView IsVisible="true"
+                     HeightRequest="100"/>
+            <Label Text="Wellcome!"
+                   HorizontalOptions="Start"
+                   FontSize="60"
+                   TextColor="#2f302f"
+                   FontFamily="SemiBold" />
+            <BoxView IsVisible="true"
+                     HeightRequest="80" />
+            <Component:CustomTextField TextPlaceholder="UserName"
+                                       TextField="{Binding LoginModel.UserName}" />
+            <BoxView IsVisible="true"
+                     HeightRequest="5" />
+            
+            <Component:CustomTextField TextPlaceholder="Password"
+                                       IsPasswordField="True"
+                                       TextField="{Binding LoginModel.Password}"/>
+           
+            <Label HorizontalOptions="EndAndExpand"
+                   FontSize="14"
+                   Text="Forgot your password?" />
+            <BoxView IsVisible="true"
+                     HeightRequest="20"/>
+            <Component:CustomButton ButtonTitle="Log in"
+                                    ButtonCommand="{Binding LoginCommand}" />
+            <BoxView IsVisible="true"
+                     HeightRequest="8" />
+            <Label HorizontalOptions="Center"
+                   FontSize="14">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="By clicking the Log in button, you accept the term of the" />
+                        <Span Text=" Private Policy"
+                              FontAttributes="Bold"
+                              TextColor="#25D366" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <BoxView IsVisible="true"
+                     HeightRequest="100" />
+            <Label Text="Or Log in via"
+                   FontSize="14"
+                   HorizontalOptions="Center" />
+            <BoxView IsVisible="True"
+                     HeightRequest="5" />
+            <Label HorizontalOptions="Center"
+                   Text="{Static Component:IconFont.User}"
+                   FontFamily="FA"
+                   FontSize="75"
+                   TextColor="#25D366">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{Static Component:IconFont.User}" />
+                        <Span Text=" " />
+                        <Span Text="{Static Component:IconFont.User}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label HorizontalOptions="Center"
+                   FontSize="14">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="No account?" />
+                        <Span Text=" Sign up "
+                              FontAttributes="Bold"
+                              TextColor="#25D366" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

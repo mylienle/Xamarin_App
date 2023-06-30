@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="this"
+             x:Class="Training_Lien.CustomIcon">
+    <Frame BindingContext="{x:Reference this}"
+           BackgroundColor="{Binding ColorBackgroud}"
+           CornerRadius="{Binding CornerRadius}"
+           HeightRequest="170"
+           WidthRequest="170"
+           HorizontalOptions="Center">
+        <Grid HorizontalOptions="Center">
+            <Label HorizontalOptions="Center" 
+                   HeightRequest="250"
+                   WidthRequest="250"
+                   Text="{Binding Icon}"/>
+            <Label Grid.Row="1"
+                   HorizontalOptions="Center"
+                   FontSize="20"
+                   TextColor="#2a2b2b"
+                Text="{Binding IconTitle, FallbackValue='Card Title'}"/>
+        </Grid>
+    </Frame>
+</ContentView>

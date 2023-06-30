@@ -1,0 +1,50 @@
+﻿
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Training_Lien.SampleStackLayout">
+    <!--<Frame BorderColor="Aqua"
+           HeightRequest="50"
+           Padding="0"
+           VerticalOptions="Start">
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="Center">
+            <Label Text="LB1"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="Center"></Label>
+            <Label Text="LB2"></Label>
+            <Label Text="LB3" />
+        </StackLayout>
+    </Frame>-->
+    <StackLayout Margin="20">
+        <Frame BorderColor="Black"
+               Padding="5">
+            <StackLayout Orientation="Horizontal"
+                         Spacing="15">
+                <BoxView Color="Red" />
+                <Label Text="Red"
+                       FontSize="Large"
+                       VerticalOptions="Center" />
+            </StackLayout>
+        </Frame>
+        <Frame BorderColor="Black"
+               Padding="5">
+            <StackLayout Orientation="Horizontal"
+                         Spacing="15">
+                <BoxView Color="Yellow" />
+                <Label Text="Yellow"
+                       FontSize="Large"
+                       VerticalOptions="Center" />
+            </StackLayout>
+        </Frame>
+        <Frame BorderColor="Black"
+               Padding="5">
+            <StackLayout Orientation="Horizontal"
+                         Spacing="15">
+                <BoxView Color="Blue" />
+                <Label Text="Blue"
+                       FontSize="Large"
+                       VerticalOptions="Center" />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,46 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:Training_Lien.SampleUI"
+             xmlns:local="clr-namespace:Training_Lien"
+             x:Class="Training_Lien.MainPage"
+             BackgroundColor="{DynamicResource SecondaryColor}"
+             x:DataType="local:PersonPageViewModel">
+    <!--<ScrollView>
+        <StackLayout Padding="60"
+                     Orientation="Vertical">
+            <Entry Placeholder="First Name"
+                   PlaceholderColor="#460e56"
+                   Text="{Binding Person.FirstName}" />
+           
+            <Entry Placeholder="Last Name"
+                   PlaceholderColor="#460e56"
+                   Text="{Binding Person.LastName}" />
+            <Entry Placeholder="Email"
+                   PlaceholderColor="#460e56"
+                   Text="{Binding Person.Email}" />
+            <Entry Placeholder="Password"
+                   PlaceholderColor="#460e56"
+                   IsPassword="True"
+                   Text="{Binding Person.Password}" />
+            <Button Text="Add Person"
+                    FontAttributes="Bold"
+                    Command="{Binding PostPeople}"
+                    HorizontalOptions="Center" />
+            <local:CustomIcon CornerRadius="15"
+                              IconTitle="Hehe"
+                              ColorBackgroud="#e1e4e8"
+                              />
+            <Label HorizontalOptions="Center"
+                   Text="{Static local:IconFont.User}"
+                   FontFamily="FA"
+                   FontSize="44"
+                   BackgroundColor="Red"/>
+            <Label Text="Welcome to Xamarin.Forms!"
+                   FontFamily="ExtraBoldItalic"
+                   FontSize="50"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ScrollView>-->
+    <local:LoginView />
+</ContentPage>

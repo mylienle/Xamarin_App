@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="this"
+             xmlns:Component="clr-namespace:Training_Lien"
+             x:Class="Training_Lien.CustomTextField">
+    <Frame HeightRequest="70"
+           Padding="10,0,10,0"
+           BackgroundColor="#cae0ca"
+           CornerRadius="15">
+        <Grid>
+            <Component:CustomEntry Focused="CustomEntry_Focused"
+                                   Unfocused="CustomEntry_UnFocused"
+                                   IsPassword="{Binding IsPasswordField, Source={x:Reference this}}"
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   Text="{Binding TextField, Source={x:Reference this}}" />
+            <Label Text="{Binding TextPlaceholder, Source={x:Reference this}}"
+                   FontSize="18"
+                   x:Name="placeholder"
+                   VerticalOptions="Center" />
+            <Label HorizontalOptions="End"
+                   VerticalOptions="Center"
+                   Text="{Binding Icon, Source={x:Reference this}}"
+                   FontSize="30"
+                   FontFamily="FA">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ChangedIconCommand, Source={x:Reference this}}"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <BoxView WidthRequest="40"
+                     IsVisible="true"/>
+        </Grid>
+    </Frame>
+</ContentView>

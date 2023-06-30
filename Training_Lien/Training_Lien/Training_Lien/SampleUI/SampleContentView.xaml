@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="this"
+             x:Class="Training_Lien.SampleContentView">
+    <Frame BindingContext="{x:Reference this}"
+           BackgroundColor="{Binding CardColor}"
+           BorderColor="{Binding BorderColor}">
+        <Grid>
+            <Frame BorderColor="{Binding BorderColor, FallbackValue='Black'}"
+                   BackgroundColor="{Binding IconBackgroundColor, FallbackValue='Grey'}">
+                <Image Source="{Binding IconImageSource}"/>
+            </Frame>
+            <Label Text="{Binding CardTitle, FallbackValue='Card Title'}"/>
+            <BoxView BackgroundColor="{Binding BorderColor, FallbackValue='Black'}"/>
+            <Label Text="{Binding CardDescription, FallbackValue='Card description text.'}"/>
+        </Grid>
+    </Frame>
+</ContentView>

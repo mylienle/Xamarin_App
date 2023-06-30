@@ -1,0 +1,16 @@
+﻿
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:component="clr-namespace:Training_Lien"
+             x:Class="Training_Lien.UseCardView">
+    <ContentPage.Content>
+        <StackLayout>
+            <component:SampleContentView />
+            <!--BorderColor="DarkGray"
+                               CardTitle="Slavko Vlasic"
+                               CardDescription="Lorem ipsum dolor sit..."
+                               IconBackgroundColor="SlateGray"
+                               IconImageSource="user.png"-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
